@@ -1,0 +1,11 @@
+# 统一换行符，避免 Windows / macOS 贡献者互相改出满屏 diff
+* text=auto eol=lf
+
+# 明确二进制
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

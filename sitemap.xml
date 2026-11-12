@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- site.config.js 里的 siteUrl 为空，所以暂时没有生成 sitemap。
+     填好域名后重新运行 node build/generate.js 即可自动生成。 -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+</urlset>

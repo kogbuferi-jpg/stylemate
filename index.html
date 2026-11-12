@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StyleMate — 网页设计风格库与实时调参器</title>
+<meta name="description" content="12 套真实可用的网页设计风格预设：配色、圆角、字体、间距一次性给全。拖动滑块实时调参，一键导出 CSS 变量、Tailwind 配置和 AI 提示词。">
+<meta name="keywords" content="网页设计风格,UI设计风格,设计token,CSS变量,Tailwind配色,AI提示词,设计系统">
+<!-- canonical 待填：在 site.config.js 配好 siteUrl 后，把下面这行换成真实地址 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="StyleMate — 网页设计风格库与实时调参器">
+<meta property="og:description" content="12 套真实可用的网页设计风格预设，拖动滑块实时预览，一键导出代码。">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#09070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23a35ff2'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%230b0810'/%3E%3Ccircle cx='21' cy='21' r='4' fill='%230b0810' opacity='.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/core.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "StyleMate",
+  "applicationCategory": "DesignApplication",
+  "operatingSystem": "Any",
+  "description": "网页设计风格库与实时调参器，提供配色、圆角、字体、间距预设并可一键导出代码。",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CNY" }
+}
+</script>
+</head>
+<body>
+
+<a href="#main" class="tag" style="position:absolute;left:-9999px;top:8px;z-index:300">跳到主内容</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="5" fill="#0b0810"/><circle cx="16" cy="16" r="5" fill="#0b0810" fill-opacity=".55"/></svg>
+      </span>
+      <span>StyleMate<span class="brand__dot">.</span></span>
+    </a>
+
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="index.html" aria-current="page">首页</a>
+      <a class="nav__link" href="styles.html">风格库</a>
+      <a class="nav__link" href="index.html#tuner">调参器</a>
+      <a class="nav__link" href="index.html#how">用法</a>
+    </nav>
+
+    <span class="nav__spacer"></span>
+
+    <div class="nav__actions">
+      <a class="nav__gh" href="styles.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.72c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.04 10.04 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        <span>12 套预设</span>
+      </a>
+      <a class="btn btn--primary btn--sm" href="styles.html">浏览风格库</a>
+      <button class="nav__burger" type="button" aria-label="打开菜单" aria-expanded="false">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero__grid" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+  <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div class="hero__inner">
+      <span class="badge-live" data-reveal>
+        <span class="badge-live__dot"></span>
+        v1.4 已上线 · 新增 3 套渐变预设
+      </span>
+
+      <h1 class="display hero__title" data-reveal data-reveal-delay="60">
+        别再对着<span class="grad-text">空白样式表</span>发呆了
+      </h1>
+
+      <p class="lede hero__sub" data-reveal data-reveal-delay="120">
+        12 套经过真实项目验证的网页设计风格预设。配色、圆角、字体、间距一次给全，
+        拖动滑块就能实时看效果，一键导出 CSS / Tailwind / AI 提示词。
+      </p>
+
+      <div class="hero__cta" data-reveal data-reveal-delay="180">
+        <a class="btn btn--primary btn--lg" href="#tuner">
+          试试调参器
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a class="btn btn--ghost btn--lg" href="styles.html">浏览全部风格</a>
+      </div>
+
+      <div class="hero__meta" data-reveal data-reveal-delay="240">
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          零依赖 · 纯 CSS 变量
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          支持 Tailwind v3 / v4
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
+          全部免费 · 无需注册
+        </span>
+      </div>
+    </div>
+
+    <!-- ============ TUNER ============ -->
+    <div class="tuner" id="tuner" data-reveal data-reveal-delay="120">
+      <div class="tuner__side">
+        <div class="tuner__side-head">
+          <span class="eyebrow">实时调参</span>
+          <button class="tuner__reset" type="button" id="tunerReset">重置</button>
+        </div>
+
+        <div class="ctrl">
+          <label class="ctrl__label" for="acidRange">
+            <span>强调色相</span>
+            <span class="ctrl__val" id="acidVal">268°</span>
+          </label>
+          <input type="range" id="acidRange" min="0" max="360" value="268" step="1"
+                 aria-describedby="acidVal">
+        </div>
+
+        <div class="ctrl">
+          <label class="ctrl__label" for="satRange">
+            <span>饱和度</span>
+            <span class="ctrl__val" id="satVal">85%</span>
+          </label>
+          <input type="range" id="satRange" min="20" max="100" value="85" step="1">
+        </div>
+
+        <div class="ctrl">
+          <label class="ctrl__label" for="radiusRange">
+            <span>圆角</span>
+            <span class="ctrl__val" id="radiusVal">14px</span>
+          </label>
+          <input type="range" id="radiusRange" min="0" max="32" value="14" step="1">
+        </div>
+
+        <div class="ctrl">
+          <label class="ctrl__label" for="scaleRange">
+            <span>字号缩放</span>
+            <span class="ctrl__val" id="scaleVal">1.00×</span>
+          </label>
+          <input type="range" id="scaleRange" min="85" max="120" value="100" step="1">
+        </div>
+
+        <div class="ctrl">
+          <span class="ctrl__label"><span>快速预设</span></span>
+          <div class="swatches" id="swatches" role="group" aria-label="快速配色预设">
+            <button class="swatch" type="button" data-h="268" data-s="85" style="background:hsl(268 85% 62%)" aria-label="紫罗兰" aria-pressed="true"></button>
+            <button class="swatch" type="button" data-h="160" data-s="72" style="background:hsl(160 72% 48%)" aria-label="薄荷" aria-pressed="false"></button>
+            <button class="swatch" type="button" data-h="38" data-s="92" style="background:hsl(38 92% 56%)" aria-label="琥珀" aria-pressed="false"></button>
+            <button class="swatch" type="button" data-h="330" data-s="82" style="background:hsl(330 82% 62%)" aria-label="品红" aria-pressed="false"></button>
+            <button class="swatch" type="button" data-h="200" data-s="88" style="background:hsl(200 88% 55%)" aria-label="天青" aria-pressed="false"></button>
+            <button class="swatch" type="button" data-h="12" data-s="88" style="background:hsl(12 88% 58%)" aria-label="朱红" aria-pressed="false"></button>
+          </div>
+        </div>
+
+        <p class="small" style="margin-top:auto">
+          参数会实时同步到右侧预览和下方代码。
+        </p>
+      </div>
+
+      <div class="tuner__stage">
+        <div class="tuner__stage-head">
+          <span class="eyebrow">预览</span>
+          <div class="tuner__tabs" role="tablist" aria-label="预览设备">
+            <button class="tuner__tab" type="button" role="tab" aria-selected="true" data-view="desktop">桌面</button>
+            <button class="tuner__tab" type="button" role="tab" aria-selected="false" data-view="mobile">移动</button>
+          </div>
+        </div>
+
+        <div class="tuner__canvas" id="tunerCanvas" data-view="desktop">
+          <div>
+            <p class="pv-title" id="pvTitle">把想法变成界面，只要一次拖拽。</p>
+            <p class="pv-text" style="margin-top:8px" id="pvText">
+              调整左侧参数，这里会同步变化。满意之后，下面就是可以直接粘贴的代码。
+            </p>
+          </div>
+
+          <div class="pv-row">
+            <button class="pv-btn" type="button">主要操作</button>
+            <button class="pv-btn pv-btn--outline" type="button">次要操作</button>
+          </div>
+
+          <div class="pv-input">输入框占位文本…</div>
+
+          <div class="pv-cards">
+            <div class="pv-card">
+              <p class="pv-card__k">组件数</p>
+              <p class="pv-card__v">64</p>
+            </div>
+            <div class="pv-card">
+              <p class="pv-card__k">可访问性</p>
+              <p class="pv-card__v">AA</p>
+            </div>
+            <div class="pv-card">
+              <p class="pv-card__k">体积</p>
+              <p class="pv-card__v">2.1<em>kb</em></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tuner__code" style="grid-column:1 / -1">
+        <div class="tuner__code-bar">
+          <div class="tuner__code-tabs" role="tablist" aria-label="代码格式">
+            <button class="tuner__code-tab" type="button" role="tab" aria-selected="true" data-fmt="css">CSS 变量</button>
+            <button class="tuner__code-tab" type="button" role="tab" aria-selected="false" data-fmt="tailwind">Tailwind</button>
+            <button class="tuner__code-tab" type="button" role="tab" aria-selected="false" data-fmt="prompt">AI 提示词</button>
+          </div>
+          <button class="copy-btn" type="button" data-copy-target="#tunerCode">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+            <span data-copy-label>复制</span>
+          </button>
+        </div>
+        <pre class="tuner__code-body" id="tunerCode"></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track" id="marqueeTrack"></div>
+</div>
+
+<!-- ============ FEATURES ============ -->
+<section class="section" id="features">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head__txt">
+        <span class="eyebrow" data-reveal>不只是配色表</span>
+        <h2 class="h2" style="margin-top:12px" data-reveal data-reveal-delay="60">
+          别的站给你截图，我们给你<span class="grad-text">能跑的代码</span>
+        </h2>
+        <p class="lede" data-reveal data-reveal-delay="100">
+          风格不是一张好看的图，而是一组相互约束的决策。StyleMate 把每套风格的
+          决策规则写清楚，并直接产出可落地的 token。
+        </p>
+      </div>
+    </div>
+
+    <div class="feature-grid">
+      <article class="card feature" data-reveal>
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/><circle cx="12" cy="12" r="3.2"/></svg>
+        </div>
+        <h3 class="h3">实时调参</h3>
+        <p>色相、饱和度、圆角、字号四条轴，拖动即变。不用改一行代码，先把感觉调对再动手。</p>
+      </article>
+
+      <article class="card feature" data-reveal data-reveal-delay="60">
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg>
+        </div>
+        <h3 class="h3">三种导出格式</h3>
+        <p>CSS 自定义属性、Tailwind theme 配置、以及描述整站视觉的 AI 提示词，同一套参数三种消费方式。</p>
+      </article>
+
+      <article class="card feature" data-reveal data-reveal-delay="120">
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h9"/></svg>
+        </div>
+        <h3 class="h3">对比度自动校验</h3>
+        <p>每个颜色组合都跑过 WCAG 计算，正文对比度低于 4.5:1 会直接标红，不靠眼估。</p>
+      </article>
+
+      <article class="card feature" data-reveal data-reveal-delay="180">
+        <div class="feature__icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4z"/><circle cx="16.5" cy="16.5" r="3.5"/></svg>
+        </div>
+        <h3 class="h3">规则而非截图</h3>
+        <p>每套风格附带 3 条硬性约束。知道「为什么这样好看」，比抄一张图走得更远。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STYLE PREVIEW GRID ============ -->
+<section class="section" id="styles" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head__txt">
+        <span class="eyebrow" data-reveal>风格库预览</span>
+        <h2 class="h2" style="margin-top:12px" data-reveal data-reveal-delay="60">12 套预设，覆盖 6 类气质</h2>
+      </div>
+      <a class="btn btn--ghost" href="styles.html" data-reveal data-reveal-delay="100">
+        查看全部
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+
+    <div class="style-grid" id="homeGrid"></div>
+  </div>
+</section>
+
+<!-- ============ HOW ============ -->
+<section class="section" id="how" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-head__txt">
+        <span class="eyebrow" data-reveal>三步用完</span>
+        <h2 class="h2" style="margin-top:12px" data-reveal data-reveal-delay="60">从浏览到上线，不超过五分钟</h2>
+      </div>
+    </div>
+
+    <div class="steps">
+      <article class="card step" data-reveal>
+        <h3>挑一个方向</h3>
+        <p>在风格库里按气质筛选，看迷你预览卡片就能判断方向对不对，不用逐个点开。</p>
+      </article>
+      <article class="card step" data-reveal data-reveal-delay="60">
+        <h3>调到你满意</h3>
+        <p>进详情页或直接用首页调参器，把色相、圆角、字号推到符合你品牌的位置。</p>
+      </article>
+      <article class="card step" data-reveal data-reveal-delay="120">
+        <h3>复制粘贴</h3>
+        <p>拿 CSS 变量粘进全局样式，或把 Tailwind 配置丢进 theme，剩下的交给你的组件。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="wrap" style="padding-bottom:var(--s-16)">
+  <div class="cta-block" data-reveal>
+    <div class="cta-block__inner">
+      <span class="eyebrow">全部免费，无需注册</span>
+      <h2 class="h2" style="max-width:22ch">12 套风格已经准备好了<br>你的项目呢？</h2>
+      <p class="lede" style="text-align:center">
+        没有邮件墙，没有试用期，没有「升级解锁」。打开、复制、上线。
+      </p>
+      <div class="hero__cta">
+        <a class="btn btn--primary btn--lg" href="styles.html">开始浏览风格库</a>
+        <a class="btn btn--ghost btn--lg" href="#tuner">先调一个看看</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="5" fill="#0b0810"/><circle cx="16" cy="16" r="5" fill="#0b0810" fill-opacity=".55"/></svg>
+          </span>
+          <span>StyleMate<span class="brand__dot">.</span></span>
+        </a>
+        <p>把设计决策写成可复制的代码。为赶工的前端和不擅长配色的独立开发者做的。</p>
+      </div>
+
+      <div class="footer__col">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="styles.html">风格库</a></li>
+          <li><a href="index.html#tuner">实时调参器</a></li>
+          <li><a href="styles.html?cat=dark">深色风格</a></li>
+          <li><a href="styles.html?cat=minimal">极简风格</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>资源</h4>
+        <ul>
+          <li><a href="styles.html">全部预设</a></li>
+          <li><a href="index.html#how">使用方法</a></li>
+          <li><a href="index.html#features">功能说明</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4>关于</h4>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="styles.html">开始使用</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> StyleMate. 示例站点，数据为演示用途。</span>
+      <span class="mono">Built with plain HTML · CSS · JS</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/styles-data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/tuner.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

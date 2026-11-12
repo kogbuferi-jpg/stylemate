@@ -1,0 +1,32 @@
+# ---- 系统 / 编辑器 ----
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+.idea/
+.vscode/
+*.sublime-workspace
+
+# ---- Node ----
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json.bak
+
+# ---- 构建与测试产物 ----
+# 注意：styles/*.html、sitemap.xml、robots.txt 是生成物，
+# 但我们**故意提交**它们 —— GitHub Pages 需要静态文件才能直接托管。
+# 如果你用 Netlify / Vercel 并在构建时跑 generate.js，可以取消下面两行注释。
+# styles/
+# sitemap.xml
+
+# 测试截图输出
+test-output/
+*.png.bak
+
+# ---- 本地环境 ----
+.env
+.env.local
+.env.*.local

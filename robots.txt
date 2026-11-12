@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# site.config.js 里的 siteUrl 为空，暂时没有 sitemap。
+# 填好域名后重新运行 node build/generate.js 会自动补上 Sitemap 这一行。

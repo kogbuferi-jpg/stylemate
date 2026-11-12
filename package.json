@@ -1,0 +1,37 @@
+{
+  "name": "stylemate",
+  "version": "1.4.0",
+  "description": "网页设计风格库 + 实时调参器。12 套视觉预设，拖动参数实时预览，一键导出 CSS / Tailwind / AI 提示词。",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "css-variables",
+    "tailwind",
+    "ui-design",
+    "style-guide",
+    "color-palette",
+    "ai-prompts",
+    "static-site"
+  ],
+  "scripts": {
+    "build": "node build/generate.js",
+    "validate": "node build/validate.js",
+    "test": "node build/test-tuner.js",
+    "test:mobile": "node build/test-mobile.js",
+    "serve": "python -m http.server 8899 --bind 127.0.0.1"
+  },
+  "files": [
+    "assets/",
+    "build/",
+    "styles/",
+    "*.html",
+    "site.config.js",
+    "sitemap.xml",
+    "robots.txt"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}

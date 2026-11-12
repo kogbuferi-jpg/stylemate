@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>风格库 — 12 套网页设计风格预设 | StyleMate</title>
+<meta name="description" content="按气质筛选 12 套网页设计风格：深色、浅色、极简、大胆、渐变。每套都附带完整配色 token、圆角、字体与硬性设计规则，可一键复制。">
+<meta name="keywords" content="网页设计风格库,UI风格预设,深色设计风格,极简设计,渐变设计,设计token">
+<!-- canonical 待填：在 site.config.js 配好 siteUrl 后，把下面这行换成真实地址 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="风格库 — 12 套网页设计风格预设">
+<meta property="og:description" content="按气质筛选 12 套网页设计风格，附带完整 token 与设计规则。">
+<meta name="theme-color" content="#09070d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23a35ff2'/%3E%3Ccircle cx='12' cy='12' r='4' fill='%230b0810'/%3E%3Ccircle cx='21' cy='21' r='4' fill='%230b0810' opacity='.6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/core.css">
+</head>
+<body>
+
+<a href="#main" class="tag" style="position:absolute;left:-9999px;top:8px;z-index:300">跳到主内容</a>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="5" fill="#0b0810"/><circle cx="16" cy="16" r="5" fill="#0b0810" fill-opacity=".55"/></svg>
+      </span>
+      <span>StyleMate<span class="brand__dot">.</span></span>
+    </a>
+    <nav class="nav__links" aria-label="主导航">
+      <a class="nav__link" href="index.html">首页</a>
+      <a class="nav__link" href="styles.html" aria-current="page">风格库</a>
+      <a class="nav__link" href="index.html#tuner">调参器</a>
+      <a class="nav__link" href="index.html#how">用法</a>
+    </nav>
+    <span class="nav__spacer"></span>
+    <div class="nav__actions">
+      <a class="nav__gh" href="styles.html">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49v-1.72c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.86.09-.66.35-1.12.63-1.38-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.36 9.36 0 015 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.8-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.6.69.49A10.04 10.04 0 0022 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        <span>12 套预设</span>
+      </a>
+      <a class="btn btn--primary btn--sm" href="index.html#tuner">调参器</a>
+      <button class="nav__burger" type="button" aria-label="打开菜单" aria-expanded="false">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="detail-hero" style="padding-block:var(--s-12) var(--s-10)">
+  <div class="wrap">
+    <div class="crumb">
+      <a href="index.html">首页</a>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>
+      <span>风格库</span>
+    </div>
+
+    <div class="detail-hero__row">
+      <div>
+        <h1>风格库</h1>
+        <p class="detail-hero__sub">
+          12 套经过实际项目检验的视觉方向。每套都是完整的一组决策——不只是颜色，
+          还有圆角尺度、字重配比和你必须遵守的三条硬性规则。
+        </p>
+      </div>
+      <div class="detail-actions">
+        <a class="btn btn--ghost" href="index.html#tuner">用调参器微调</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-block:var(--s-10) var(--s-20)">
+
+  <div class="filters" role="group" aria-label="按气质筛选">
+    <span class="eyebrow" style="margin-right:4px">气质</span>
+    <div id="filterTags" style="display:flex;gap:8px;flex-wrap:wrap"></div>
+
+    <div class="filters__search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input class="filters__input" type="search" id="styleSearch" placeholder="搜索风格名、气质或关键词…" aria-label="搜索风格">
+    </div>
+  </div>
+
+  <p class="small" id="resultCount" style="margin-bottom:var(--s-5)"></p>
+
+  <div class="style-grid" id="styleGrid"></div>
+  <div class="empty" id="emptyState" hidden>
+    没有匹配的风格。试着换个关键词，或切回「全部」。
+  </div>
+
+</section>
+
+<section class="wrap" style="padding-bottom:var(--s-20)">
+  <div class="cta-block" data-reveal>
+    <div class="cta-block__inner">
+      <span class="eyebrow">找不到合适的？</span>
+      <h2 class="h2" style="max-width:24ch">自己拖一个出来</h2>
+      <p class="lede" style="text-align:center">
+        四条参数轴，无限种组合。调到你满意就直接复制代码，不用在 12 套里面将就。
+      </p>
+      <a class="btn btn--primary btn--lg" href="index.html#tuner">打开调参器</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div class="footer__about">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><circle cx="9" cy="9" r="5" fill="#0b0810"/><circle cx="16" cy="16" r="5" fill="#0b0810" fill-opacity=".55"/></svg>
+          </span>
+          <span>StyleMate<span class="brand__dot">.</span></span>
+        </a>
+        <p>把设计决策写成可复制的代码。为赶工的前端和不擅长配色的独立开发者做的。</p>
+      </div>
+      <div class="footer__col">
+        <h4>产品</h4>
+        <ul>
+          <li><a href="styles.html">风格库</a></li>
+          <li><a href="index.html#tuner">实时调参器</a></li>
+          <li><a href="styles.html?cat=dark">深色风格</a></li>
+          <li><a href="styles.html?cat=minimal">极简风格</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>资源</h4>
+        <ul>
+          <li><a href="styles.html">全部预设</a></li>
+          <li><a href="index.html#how">使用方法</a></li>
+          <li><a href="index.html#features">功能说明</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>关于</h4>
+        <ul>
+          <li><a href="index.html">首页</a></li>
+          <li><a href="styles.html">开始使用</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span data-year>2026</span> StyleMate. 示例站点，数据为演示用途。</span>
+      <span class="mono">Built with plain HTML · CSS · JS</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/styles-data.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/catalog.js"></script>
+</body>
+</html>
